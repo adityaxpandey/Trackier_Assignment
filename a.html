@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trello Clone</title>
+    <link rel="stylesheet" href="a.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Login Page -->
+    <div id="login-page" class="centered-container">
+        <div class="form-container">
+            <h2 class="form-title">Login</h2>
+            <form id="login-form">
+                <input type="email" id="login-email" placeholder="Email" class="form-input" required>
+                <input type="password" id="login-password" placeholder="Password" class="form-input" required>
+                <button type="submit" class="form-button">Login</button>
+                <p class="form-text">Don't have an account? <a href="#" id="go-to-register" class="form-link">Register here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Registration Page -->
+    <div id="register-page" class="centered-container" style="display:none;">
+        <div class="form-container">
+            <h2 class="form-title">Register</h2>
+            <form id="register-form">
+                <input type="text" id="register-name" placeholder="Name" class="form-input" required>
+                <input type="email" id="register-email" placeholder="Email" class="form-input" required>
+                <input type="password" id="register-password" placeholder="Password" class="form-input" required>
+                <button type="submit" class="form-button">Register</button>
+                <p class="form-text">Already have an account? <a href="#" id="go-to-login" class="form-link">Login here</a></p>
+            </form>
+        </div>
+    </div>
+
+    <!-- Dashboard -->
+    <div id="dashboard" style="display:none;">
+        <header class="dashboard-header">
+            <h1 class="dashboard-title">Trello Clone Dashboard</h1>
+            <nav>
+                <ul class="nav-list">
+                    <li><a href="#" id="projects-tab" class="nav-link">Projects</a></li>
+                    <li><a href="#" id="task-board-tab" class="nav-link">Task Board</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id="content-area" class="content-container">
+            <!-- Projects Section -->
+            <div id="projects-section" style="display:none;">
+                <h2 class="section-title">Projects</h2>
+                <button id="new-project-btn" class="section-button">Create New Project</button>
+                <div id="project-list" class="project-list"></div>
+            </div>
+
+            <!-- Task Board Section -->
+            <div id="task-board-section" style="display:none;">
+                <h2 class="section-title">Task Board</h2>
+                <div id="task-board" class="task-board">
+                    <div class="task-column" id="backlog">
+                        <h3 class="column-title">Backlog</h3>
+                    </div>
+                    <div class="task-column" id="in-discussion">
+                        <h3 class="column-title">In Discussion</h3>
+                    </div>
+                    <div class="task-column" id="in-progress">
+                        <h3 class="column-title">In Progress</h3>
+                    </div>
+                    <div class="task-column" id="done">
+                        <h3 class="column-title">Done</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project Details Section -->
+            <div id="project-details-section" style="display:none;">
+                <h2 class="section-title" id="project-details-title">Project Details</h2>
+                <button id="add-task-btn" class="section-button">Add Task</button>
+                <div id="task-list" class="task-list"></div>
+                <button id="back-to-projects-btn" class="section-button">Back to Projects</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="a.js"></script>
+</body>
+</html>
